@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 27px;
+        }
+    </style>
+</head>
+<body bgcolor="#ff3300">
+    <form id="form1" runat="server">
+    <div>
+    </div>
+    <table bgcolor="#FF9933" class="style1">
+        <tr>
+            <td colspan="2">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/resouces/LogoInacap1.jpg" 
+                    Width="1242px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style2" width="30%">
+                <asp:Menu ID="Menu1" runat="server">
+                    <Items>
+                        <asp:MenuItem Text="inicio" Value="inicio" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="ejercicio1" Value="ejercicio1" 
+                            NavigateUrl="~/Default2.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="ejercicio2" Value="ejercicio2" 
+                            NavigateUrl="~/Default3.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+            <td width="70%">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                derechos de autor: Juan Fco. Hervas Farru</td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
